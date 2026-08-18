@@ -277,7 +277,7 @@ public class PayrollService {
         variables.put(VAR_TOTAL_BPJS, totalBpjsKes.add(totalBpjsTk));
         variables.put(VAR_TOTAL_BPJS_KES, totalBpjsKes);
         variables.put(VAR_TOTAL_BPJS_TK, totalBpjsTk);
-        variables.put(VAR_PPH21, payrollRun.getTotalPph21());
+        // pph21 total withheld from formula variables pending purpose review
         variables.put(VAR_NET_PAY, payrollRun.getTotalNetPay());
 
         FormulaContext payrollContext = FormulaContext.of(payrollRun.getTotalGross(), variables);

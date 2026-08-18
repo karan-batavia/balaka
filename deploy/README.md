@@ -46,11 +46,11 @@ export DIGITALOCEAN_TOKEN="your-token-here"
 
 # Set required configuration
 pulumi config set dropletName accounting-app
-pulumi config set region sgp1
+# region intentionally unset - chosen at deploy time after data-residency review
 pulumi config set sshKeyName "your-ssh-key-name"
 pulumi config set domainName artivisi.id
 pulumi config set subdomainName akunting
-
+pulumi config set backupBucketRegion us-east-1
 # Preview changes
 pulumi preview
 
